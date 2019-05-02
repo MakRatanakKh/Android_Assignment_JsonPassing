@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:background="#ABB027">
+    <LinearLayout
+
+        android:padding="50dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="#FDFDFD"
+        android:layout_marginVertical="90dp"
+        android:layout_gravity="center">
+
+        <ImageView
+
+            android:id="@+id/imgProfile"
+            android:layout_width="190dp"
+            android:layout_height="160dp"
+            android:src="@drawable/profile"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID : B20160045"
+                android:textColor="@color/second"/>
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="NAME : Mak Ratanak"
+                android:textColor="@color/second"/>
+            <TextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ADDRESS"
+                android:textColor="@color/second"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+</LinearLayout>
