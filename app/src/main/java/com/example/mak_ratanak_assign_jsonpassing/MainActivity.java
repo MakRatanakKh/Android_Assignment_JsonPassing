@@ -112,15 +112,10 @@ public class MainActivity extends AppCompatActivity {
 //                        Toast.makeText(getApplicationContext(), "Item clicked!", Toast.LENGTH_LONG).show();
                         Intent i = new Intent(getApplicationContext(), DetailActivity.class);
                         UserModel user = modelList.get(position);
-                        Toast.makeText(getApplicationContext(), user.toString(), Toast.LENGTH_LONG).show();
                         i.putExtra("NAME", user.getName());
                         i.putExtra("ID", user.getId());
                         i.putExtra("ADDRESS", user.getAddress());
                         i.putExtra("PROFILE_URL", user.getImgUrl());
-//                        i.putExtra("NAME", "Ratanak");
-//                        i.putExtra("ID", "B20160045");
-//                        i.putExtra("ADDRESS", "Praeaklieb");
-//                        i.putExtra("PROFILE_URL", "");
                         startActivity(i);
                     }
                 });

@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
 
@@ -28,6 +29,7 @@ public class DetailActivity extends AppCompatActivity {
         tvId.setText("ID : " + i.getStringExtra("ID"));
         tvName.setText("Name : " + i.getStringExtra("NAME"));
         tvAddress.setText("Address : " + i.getStringExtra("ADDRESS"));
-//        Picasso.get().load(i.getStringExtra("PROFILE_URL")).into(imgView);
+//        Toast.makeText(getApplicationContext(), i.getStringExtra("PROFILE_URL"), Toast.LENGTH_LONG).show();
+        Picasso.get().load(i.getStringExtra("PROFILE_URL")).into(imgView);
     }
 }
