@@ -23,11 +23,11 @@ public class DetailActivity extends AppCompatActivity {
         tvAddress = findViewById(R.id.tv_address);
         imgView = findViewById(R.id.img_profile);
 
-        Intent intent = getIntent();
+        Intent i = getIntent();
 
-        tvId.setText("ID : " + intent.getStringExtra("ID"));
-        tvName.setText("Name : " + intent.getStringExtra("NAME"));
-        tvAddress.setText("Address : " + intent.getStringExtra("ADDRESS"));
-        Picasso.get().load(intent.getStringExtra("IMG")).into(imgView);
+        tvId.setText("ID : " + i.getStringExtra("ID"));
+        tvName.setText("Name : " + i.getStringExtra("NAME"));
+        tvAddress.setText("Address : " + i.getStringExtra("ADDRESS"));
+//        Picasso.get().load(i.getStringExtra("PROFILE_URL")).into(imgView);
     }
 }

@@ -1,10 +1,14 @@
 package com.example.mak_ratanak_assign_jsonpassing;
 
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.example.mak_ratanak_assign_jsonpassing.adapter.UserAdapter;
 import com.example.mak_ratanak_assign_jsonpassing.model.UserModel;
@@ -101,6 +105,25 @@ public class MainActivity extends AppCompatActivity {
 
                 adapter = new UserAdapter(MainActivity.this, modelList);
                 lvUser.setAdapter(adapter);
+
+                lvUser.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                    @Override
+                    public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+//                        Toast.makeText(getApplicationContext(), "Item clicked!", Toast.LENGTH_LONG).show();
+                        Intent i = new Intent(getApplicationContext(), DetailActivity.class);
+                        UserModel user = modelList.get(position);
+                        Toast.makeText(getApplicationContext(), user.toString(), Toast.LENGTH_LONG).show();
+                        i.putExtra("NAME", user.getName());
+                        i.putExtra("ID", user.getId());
+                        i.putExtra("ADDRESS", user.getAddress());
+                        i.putExtra("PROFILE_URL", user.getImgUrl());
+//                        i.putExtra("NAME", "Ratanak");
+//                        i.putExtra("ID", "B20160045");
+//                        i.putExtra("ADDRESS", "Praeaklieb");
+//                        i.putExtra("PROFILE_URL", "");
+                        startActivity(i);
+                    }
+                });
 
             }catch(Exception e){
                 Log.e("Json error : ",e.toString());
